@@ -1,0 +1,10 @@
+{
+    "vfo": {
+        "kp": 0.5,
+        "ka": 1,
+        "eta": 0.32,
+        "sigmai": 1,
+        "U2": 1
+    },
+    "force": {
+        "activationDistance": 

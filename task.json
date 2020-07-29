@@ -1,0 +1,17 @@
+{
+    "vfo":{
+        "kp":0.5, 
+        "ka":1, 
+        "eta":0.32, 
+        "sigmai":1, 
+        "U2":1
+    }, 
+    "force":{
+        "activationDistance":10, 
+        "function":"1*sign/dist"
+    }, 
+    "results":{
+        "colision":0, 
+        "endTime":208.99871535463197
+    }
+}
