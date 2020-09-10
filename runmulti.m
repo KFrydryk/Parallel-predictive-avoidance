@@ -59,13 +59,15 @@ for acDist = acDistMin : acDistStep : acDistMax
             MAX_RADIUS = obstacle_data(i).max_radius;
             NUM_OF_OBSTACLES = obstacle_data(i).num_of_obstacles;
             %obstacles = struct2cell(obstacle_data(i).obstacles);
-            obstacles = cell2mat(struct2cell(obstacle_data(i).obstacles))';
+            %obstacles = cell2mat(struct2cell(obstacle_data(i).obstacles))'
+            
+            obstacles = [1 40*rand(1) 20 2];
             %pause(0.1);
             task_data = jsondecode(fileread("task.json"));
             task_data.force.activationDistance = acDist;
             %task_data.force.function = int2str(kval) + "*sign/dist";
             task_data.force.function = 1;
-            targets = [pi/2, 20,200]';
+            targets = [pi/2, 20, 40]';
             startPos = [pi/2, 20, 0];
             
             in(Ni) = in(Ni).setBlockParameter('untitled1/obstacles', 'Value', mat2str(obstacles));
